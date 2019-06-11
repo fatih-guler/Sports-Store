@@ -29,3 +29,4 @@
 /home/dev-fatih/NET-Core/SportsStore/obj/Debug/netcoreapp2.2/SportsStore.csproj.CopyComplete
 /home/dev-fatih/NET-Core/SportsStore/obj/Debug/netcoreapp2.2/Razor/Views/Product/List.g.cshtml.cs
 /home/dev-fatih/NET-Core/SportsStore/obj/Debug/netcoreapp2.2/Razor/Views/Shared/ProductSummary.g.cshtml.cs
+/home/dev-fatih/NET-Core/SportsStore/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Components/NavigationMenu/Default.g.cshtml.cs

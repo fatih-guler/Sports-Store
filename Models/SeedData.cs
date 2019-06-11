@@ -10,7 +10,9 @@ namespace SportsStore.Models
           public static void EnsurePopulated(IApplicationBuilder app) {
             ApplicationDbContext context = app.ApplicationServices
                 .GetRequiredService<ApplicationDbContext>();
+            // Veritabanı oluşturulmadıysa, oluşturulacak
             context.Database.Migrate();
+            // Eğer ürün yoksa, ürünler eklenecek
             if (!context.Products.Any()) {
                 context.Products.AddRange(
                     new Product {

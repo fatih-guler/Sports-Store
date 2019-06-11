@@ -13,7 +13,8 @@
     </div>
     <div class="row m-1 p-1">
         <div id="categories" class="col-3">
-            Put something useful here later
+            <!-- NavigationMenu bir ViewComponent ve Invoke metodu içerisinden dönen veri buraya basılacak -->
+            @await Component.InvokeAsync("NavigationMenu")
         </div>
         <div class="col-9">
         @RenderBody()
