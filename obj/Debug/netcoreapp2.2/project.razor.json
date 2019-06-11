@@ -63,6 +63,19 @@
           },
           {
             "Kind": "ITagHelper",
+            "Name": "page-url-values",
+            "TypeName": "System.Collections.Generic.Dictionary<System.String, System.Object>",
+            "IsEnum": false,
+            "IndexerNamePrefix": "page-url",
+            "IndexerTypeName": "System.Object",
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "PageUrlValues"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
             "Name": "page-classes-enabled",
             "TypeName": "System.Boolean",
             "IsEnum": false,
@@ -2862,6 +2875,30 @@
           "Runtime.Name": "ITagHelper",
           "Common.TypeName": "Microsoft.AspNetCore.SpaServices.Prerendering.PrerenderTagHelper"
         }
+      },
+      {
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__NavigationMenuViewComponentTagHelper",
+        "AssemblyName": "SportsStore",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:navigation-menu",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__NavigationMenuViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "NavigationMenu"
+        }
       }
     ],
     "CSharpLanguageVersion": 703
@@ -2886,6 +2923,11 @@
     {
       "FilePath": "Views/Home/Privacy.cshtml",
       "TargetPath": "Views/Home/Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Cart/Index.cshtml",
+      "TargetPath": "Views/Cart/Index.cshtml",
       "FileKind": "mvc"
     },
     {

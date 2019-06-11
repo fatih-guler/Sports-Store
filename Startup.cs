@@ -36,12 +36,16 @@ namespace SportsStore
             //SQLite Configuration
             services.AddDbContext<ApplicationDbContext>(options => 
                         options.UseSqlite(Configuration["Data:SportsStoreProducts:ConnectionString"]));
-
-
+            
             // // Dependency  injection configuration
             services.AddTransient<IProductRepository, EFProductRepository>();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +64,7 @@ namespace SportsStore
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseCookiePolicy();
             app.UseStatusCodePages();
             app.UseMvc(routes =>
